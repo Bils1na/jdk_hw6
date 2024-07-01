@@ -1,13 +1,13 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        int totalSimulations = 1000;
+        MontyHallSimulation simulation = new MontyHallSimulation(totalSimulations);
+        simulation.runSimulation();
+
+        Result.printStatistics(simulation.getResults());
     }
 }
